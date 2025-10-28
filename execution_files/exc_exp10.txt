@@ -1,0 +1,8 @@
+python experiment_place.py --info 1 --savedir dist1_10 --sys 0 --dist 1 --nexp 10 --conf 2 --iters 10000
+python experiment_place.py --info 1 --savedir dist2_10 --sys 0 --dist 2 --nexp 10 --conf 2 --iters 10000
+python experiment_place.py --info 1 --savedir dist3_10 --sys 0 --dist 3 --nexp 10 --conf 2 --iters 10000
+python experiment_place.py --info 1 --savedir dist4_10 --sys 0 --dist 4 --nexp 10 --conf 2 --iters 10000
+
+
+#Only if the correct values are setle
+python experiment_place.py --info 1 --savedir dist5_10 --sys 0 --dist 5 --nexp 10 --conf 2 --iters 10000

@@ -1,0 +1,8 @@
+python market_test.py --iters 150000 --info 0 --matNameDir matrices/af_0_k101/af_0_k101.mtx --savedir af_0_k101
+python market_test.py --iters 150000 --info 0 --matNameDir matrices/af_1_k101/af_1_k101.mtx --savedir af_1_k101
+python market_test.py --iters 150000 --info 0 --matNameDir matrices/af_2_k101/af_2_k101.mtx --savedir af_2_k101
+python market_test.py --iters 150000 --info 0 --matNameDir matrices/af_3_k101/af_3_k101.mtx --savedir af_3_k101
+python market_test.py --iters 150000 --info 0 --matNameDir matrices/af_4_k101/af_4_k101.mtx --savedir af_4_k101
+python market_test.py --iters 150000 --info 0 --matNameDir matrices/af_5_k101/af_5_k101.mtx --savedir af_5_k101
+python market_test.py --iters 150000 --info 0 --matNameDir matrices/af_shell3/af_shell3.mtx --savedir af_shell3
+python market_test.py --iters 150000 --info 0 --matNameDir matrices/af_shell7/af_shell7.mtx --savedir af_shell7

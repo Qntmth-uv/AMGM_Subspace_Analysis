@@ -1,0 +1,9 @@
+#python market_test.py --iters 150000 --info 0 --matNameDir matrices/bcsstk13/bcsstk13.mtx --savedir bcsstk13 
+#python market_test.py --iters 150000 --info 0 --matNameDir matrices/bcsstk15/bcsstk15.mtx --savedir bcsstk15 
+#python market_test.py --iters 150000 --info 0 --matNameDir matrices/bcsstk17/bcsstk17.mtx --savedir bcsstk17
+#python market_test.py --iters 150000 --info 0 --matNameDir matrices/bcsstk18/bcsstk18.mtx --savedir bcsstk18
+#python market_test.py --iters 150000 --info 0 --matNameDir matrices/bcsstk23/bcsstk23.mtx --savedir bcsstk23
+#python market_test.py --iters 150000 --info 0 --matNameDir matrices/bcsstk24/bcsstk24.mtx --savedir bcsstk24
+#python market_test.py --iters 150000 --info 0 --matNameDir matrices/bcsstk25/bcsstk25.mtx --savedir bcsstk25
+#python market_test.py --iters 150000 --info 0 --matNameDir matrices/bcsstk36/bcsstk36.mtx --savedir bcsstk36
+#python market_test.py --iters 150000 --info 0 --matNameDir matrices/bcsstk38/bcsstk38.mtx --savedir bcsstk38

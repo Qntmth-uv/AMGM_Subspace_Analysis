@@ -1,0 +1,4 @@
+python experiment_place.py --info 1 --savedir dist1_30 --sys 0 --dist 1 --nexp 30 --conf 1 --iters 10000
+python experiment_place.py --info 1 --savedir dist2_30 --sys 0 --dist 2 --nexp 30 --conf 1 --iters 10000
+python experiment_place.py --info 1 --savedir dist3_30 --sys 0 --dist 3 --nexp 30 --conf 1 --iters 10000
+python experiment_place.py --info 1 --savedir dist4_30 --sys 0 --dist 4 --nexp 30 --conf 1 --iters 10000

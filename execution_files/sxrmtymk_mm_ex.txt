@@ -1,0 +1,5 @@
+python market_test.py --iters 150000 --info 0 --matNameDir matrices/s1rmq4m1/s1rmq4m1.mtx --savedir s1rmq4m1
+python market_test.py --iters 150000 --info 0 --matNameDir matrices/s2rmt3m1/s2rmt3m1.mtx --savedir s2rmt3m1
+python market_test.py --iters 150000 --info 0 --matNameDir matrices/s3rmq4m1/s3rmq4m1.mtx --savedir s3rmq4m1
+python market_test.py --iters 150000 --info 0 --matNameDir matrices/s3rmt3m1/s3rmt3m1.mtx --savedir s3rmt3m1
+python market_test.py --iters 150000 --info 0 --matNameDir matrices/s3rmt3m3/s3rmt3m3.mtx --savedir s3rmt3m3

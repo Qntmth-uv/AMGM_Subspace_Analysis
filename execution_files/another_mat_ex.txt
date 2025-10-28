@@ -1,0 +1,7 @@
+python market_test.py --iters 150000 --info 0 --matNameDir matrices/Flan_1565/Flan_1565.mtx --savedir Flan_1565
+python market_test.py --iters 150000 --info 0 --matNameDir matrices/mhd4800b/mhd4800b.mtx --savedir mhd4800b
+python market_test.py --iters 150000 --info 0 --matNameDir matrices/msc23052/msc23052.mtx --savedir msc23052
+python market_test.py --iters 150000 --info 0 --matNameDir matrices/nasasrb/nasasrb.mtx --savedir nasasrb
+python market_test.py --iters 150000 --info 0 --matNameDir matrices/nasa4704/nasa4704.mtx --savedir nasa4704
+python market_test.py --iters 150000 --info 0 --matNameDir matrices/sts4098/sts4098.mtx --savedir sts4098
+python market_test.py --iters 150000 --info 0 --matNameDir matrices/2cubes_sphere/2cubes_sphere.mtx --savedir 2cubes_sphere

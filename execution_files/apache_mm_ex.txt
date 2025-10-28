@@ -1,0 +1,2 @@
+python market_test.py --iters 150000 --info 0 --matNameDir matrices/apache1/apache1.mtx --savedir apache1
+python market_test.py --iters 150000 --info 0 --matNameDir matrices/apache2/apache2.mtx --savedir apache2
