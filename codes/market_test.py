@@ -1,5 +1,4 @@
 #Importamos las librerias que provienen de otro directorio
-import sys
 import os
 import argparse
 
@@ -19,8 +18,9 @@ import warnings
 warnings.filterwarnings("ignore")
 
 #Execution example
-#python market_test.py -h --iters 150000 --info 0 --matNameDir matrices/bcsstk13/bcsstk13.mtx --savedir bcsstk13 
-
+#python market_test.py --iters 150000 --info 0 --matNameDir matrices/bcsstk13/bcsstk13.mtx --savedir bcsstk13 
+#    <file>      <iterations> <show info> <Directory of the matrix with tht mtx format> <save results directory>
+#As an standard rule the savedir name is the name of the matrix.
 
 def download_MM(id_dic: dict, dest_folder = "./matrices"):
     """Download a set of Market Matrices and save them in a given folder.
@@ -63,7 +63,7 @@ def load_single_MM(matrix_path: str):
     else:
         raise ValueError; print(f"Matrix {matrix} not founded")
 
-
+# Tested matrices
 test_matrices = {
     1919: "2Cubes_Sphere", 1580: "af_0_k101", 1581: "af_1_k101", 1582: "af_2_k101",
     1583: "af_3_k101", 1584: "af_4_k101", 1585: "af_5_k101", 942: "af_shell3",
@@ -99,38 +99,37 @@ if __name__ == "__main__":
         # Convert sparse matrix to dense
         A = A.toarray()  
 
-    #Creation of the b vector.
+    #Creation of the b vector (acording to the original paper)
     x_aux = np.arange(1, A.shape[0]+1, dtype=float)
     b = np.matmul(A, x_aux)
     print(f"B norm: {np.linalg.norm(b)}")
+
     #Creation of the init point
     x0 = np.ones(A.shape[0], dtype=float)
 
-    #Tolerance
+    #Tolerance (according to the original paper)
     t = 1e-9 
     print(f"Tolerance: {t: 1.8e}")
     
     # Generate the quadratic convex function.
     Q = general_Convex_Quadratic(dimension=A.shape[0], matrix = A, b_vector=b, init_point=x0)
 
-    #Place to save the results
+    #Place where to save the results
     results = np.empty(shape=(11), dtype=float)
 
-    #Call the method
+    #Call the methods (the second entry is the condition number)
     results[0], results[1] = A.shape[0], 0
     results[2:5] = AMGM_method(Q.init_point, Q.matrix, Q.b, t, args.iters, system_to_use=4, show_info=args.info)[0:3]
     results[5:8] = AMGM_method(Q.init_point, Q.matrix, Q.b, t, args.iters, system_to_use=7, show_info=args.info)[0:3]
     results[8:] = linear_CGM(Q.init_point, Q.matrix, Q.b, t, args.iters, show_info=args.info)
-
     print("Ended process")
 
     # Header of the df
     #baseline = ["Dimension", "K(A)", "Niters", "ExcTime", "GNorm", "Niters", "ExcTime", "GNorm", "Niters", "ExcTime", "GNorm"]
 
-    # # Create DataFrame
+    #Create DataFrame
     df = pd.DataFrame(results)
-    print(df)
-    
-    # # os.makedirs('results_csv/dist2', exist_ok=True)
+
+    #Write the CSV file with the results.
     df.T.to_csv(f"matrices/results_methods/{args.savedir}.csv", index=False, float_format='%1.5e')
     
